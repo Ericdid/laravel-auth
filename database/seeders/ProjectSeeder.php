@@ -21,8 +21,9 @@ class ProjectSeeder extends Seeder
         for ($i = 0; $i < 10; $i++) {
             $project = new Project();
             $project->title = $faker->word();
-            $project->content = $faker->$faker->paragraphs(2, true);
+            $project->content = $faker->paragraphs(2, true);
             $project->slug = str::slug($project->title);
+            $project->save();
 
         }
 
