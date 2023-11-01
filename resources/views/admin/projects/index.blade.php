@@ -6,10 +6,11 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Title</th>
+                    <th scope="col">Titolo</th>
                     <th scope="col">Slug</th>
-                    <th scope="col">Created At</th>
-                    <th scope="col">Updated At</th>
+                    <th scope="col">Creato In Data</th>
+                    <th scope="col">Aggiornato In Data</th>
+                    <th scope="col">Interazioni</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,7 +21,7 @@
                         <td>{{ $project->slug }}</td>
                         <td>{{ $project->created_at }}</td>
                         <td>{{ $project->updated_at }}</td>
-                        <td></td>
+                        <td> <a href={{ Route('admin.projects.show', $project) }}> Dettagli Progetto</a> </td>
                     </tr>
                 @empty
                     <tr>
